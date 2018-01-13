@@ -13,8 +13,8 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 
     [0] = \
     KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLASH, GRAVE, \
-           TAB,  Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,CAPS, \
-           LCTL, A,   S,   D,   F,   G,   H,   FN3,   K,   L,   FN2, QUOT, LCTL, \
+           FN3,  Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,CAPS, \
+           LCTL, A,   S,   D,   F,   G,   H,   J,   K,   L,   FN2, QUOT, LCTL, \
            LGUI, Z,   X,   C,   V,   B,   N,   M, COMMA, DOT, SLASH, LGUI,FN1, \
                 LALT,LSFT,           SPACE,                LALT, FN4),
 
@@ -34,10 +34,10 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 
     [3] = \
     KEYMAP(FN0,    F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,    F11,    F12,    INS,    DEL, \
-           TRNS, FN24,  FN25,  LBRC,  RBRC,    NO,    NO,  TRNS,  TRNS,  TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
-           TRNS, MINS,   EQL,BSLASH, GRAVE,    NO,  TRNS,  TRNS,  TRNS,  TRNS,   TRNS,   TRNS,   TRNS, \
-           TRNS, FN20,  FN21,  FN22,  FN23,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,   TRNS,   TRNS,   TRNS, \
-                TRNS,TRNS,           SPACE,               TRNS,TRNS),
+           TRNS,  NO,    NO,  TRNS,  TRNS,   TRNS,   TRNS,  FN24,  FN25,  LBRC,  RBRC,     TRNS,   TRNS,   TRNS, \
+           TRNS,  NO,  TRNS,  TRNS,  TRNS,   TRNS,   TRNS,  MINS,   EQL,BSLASH, GRAVE,     TRNS,   TRNS, \
+           TRNS,TRNS,  TRNS,  TRNS,  TRNS,   TRNS,   TRNS,  FN20,  FN21,  FN22,  FN23,     TRNS,   TRNS, \
+                TRNS,TRNS,           SPACE,              TRNS,TRNS),
 
 		[4] = \
     KEYMAP(GRV, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL, \
@@ -60,7 +60,7 @@ const action_t fn_actions[] PROGMEM = {
     [0] = ACTION_LAYER_TAP_TOGGLE(0),
     [1] = ACTION_LAYER_TAP_TOGGLE(1),
     [2] = ACTION_LAYER_TAP_TOGGLE(2), 
-    [3] = ACTION_LAYER_TAP_KEY(3, KC_J),
+    [3] = ACTION_LAYER_TAP_KEY(3, KC_TAB),
     [4] = ACTION_LAYER_TAP_TOGGLE(4), 
 		[10] = ACTION_MODS_KEY(MOD_LSFT, KC_1),          //Exclamation
 		[11] = ACTION_MODS_KEY(MOD_LSFT, KC_2),          //At
