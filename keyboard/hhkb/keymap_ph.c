@@ -12,11 +12,11 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 #endif
 
     [0] = \
-    KEYMAP(FN4,  1,   2,  3,   4,    5,   6,   7 ,  8,  9,   0,   MINS,  EQL,  BSLASH, GRAVE, \
+    KEYMAP(FN4,  1,   2,  3,   4,    5,   6,   7 ,  8,  9,   0,   MINS,  EQL,  BSLASH, FN0, \
            TAB,  Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,  LBRC, RBRC,TAB, \
            LCTL, A,   S,   D,   F,   G,   H,   J,   K,   L,   FN2, QUOT, LCTL, \
-           LGUI, Z,   X,   C,   V,   B,   N,   M,  FN5, FN3, SLASH, LGUI,FN1, \
-                LALT, LSFT,           SPACE,              LALT, FN0),
+           LGUI, Z,   X,   C,   V,   B,   N,   M,  FN5, FN3, FN6, LGUI,FN1, \
+                LALT, LSFT,           SPACE,              LALT, GRAVE),
 
     [1] = \
     KEYMAP(TRNS, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, TRNS, FN0, \
@@ -40,7 +40,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
                 TRNS,TRNS,         TRNS,               TRNS      ,  TRNS),
 
     [4] = \
-    KEYMAP(TRNS, TRNS,  LCTRL,  TRNS,  LGUI,  TRNS,  TRNS,  TRNS,  TRNS ,  TRNS, TRNS, TRNS, TRNS, TRNS, FN0, \
+    KEYMAP(TRNS, FN7,  LCTRL,  LGUI,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS ,  TRNS, TRNS, TRNS, TRNS, TRNS, FN0, \
            TRNS, ESC,  BSPC,   UP,  DEL,    NO,    NO,   7,  8,   9,   FN17,   TRNS, TRNS,  TRNS,  \
            TRNS, ENT, LEFT,  DOWN, RGHT,   TAB,   TRNS,   4,  5,   6,   0,  TRNS,  TRNS, \ 
            TRNS, MINS, EQL, SCOLON, FN26,  TRNS,  TRNS,   1,  2,   3,   TRNS,   TRNS, TRNS, \ 
@@ -51,6 +51,20 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
            TRNS, FN24,  FN25,  LBRC,  RBRC,    TRNS,    TRNS,   TRNS,  TRNS,   TRNS,   TRNS,   TRNS, TRNS,  TRNS,  \
            TRNS, FN28,  FN29,  FN18,  FN19,   TRNS,   TRNS,   TRNS,  TRNS,   TRNS,   TRNS,  TRNS,  TRNS, \ 
            TRNS, TRNS,  TRNS,  FN27, QUOT,  TRNS,  TRNS,   TRNS,  TRNS,   TRNS,   TRNS,   TRNS, TRNS, \ 
+                TRNS,TRNS,         LALT,               TRNS      ,  TRNS),
+
+    [6] = \
+    KEYMAP(TRNS, TRNS,  BTN3,  BTN4,  BTN5,  TRNS,  TRNS,  TRNS,  TRNS ,  TRNS, TRNS, TRNS, TRNS, TRNS, FN0, \
+           TRNS, WH_U,  BTN2,  MS_U,  BTN1,    TRNS,    TRNS,   TRNS,  TRNS,   TRNS,   TRNS,   TRNS, TRNS,  TRNS,  \
+           TRNS, WH_D,  MS_L,  MS_D,  MS_R,   TRNS,   TRNS,   TRNS,  TRNS,   TRNS,   TRNS,  TRNS,  TRNS, \ 
+           TRNS, TRNS,  TRNS,  WH_L,  WH_R,  TRNS,  TRNS,   TRNS,  TRNS,   TRNS,   TRNS,   TRNS, TRNS, \ 
+                TRNS,BTN2,         BTN1,               TRNS      ,  TRNS),
+
+		[7] = \
+    KEYMAP(TRNS, TRNS,  LCTRL,  LGUI,  TRNS,  TRNS,  TRNS,  F10,  F11 ,  F12, TRNS, TRNS, TRNS, TRNS, FN0, \
+           TRNS, ESC,  BSPC,   UP,  DEL,    NO,    NO,      F7,  F8,   F9,   TRNS,   TRNS, TRNS,  TRNS,  \
+           TRNS, ENT, LEFT,  DOWN, RGHT,   TAB,   TRNS,     F4,  F5,   F6,   F10,  TRNS,  TRNS, \ 
+           TRNS, MINS, EQL, SCOLON, FN26,  TRNS,  TRNS,     F1,  F2,   F3,   TRNS,   TRNS, TRNS, \ 
                 TRNS,TRNS,         LALT,               TRNS      ,  TRNS),
 
 
@@ -76,6 +90,8 @@ const action_t fn_actions[] PROGMEM = {
 	  [4] = ACTION_LAYER_MOMENTARY(4),
 		[3] = ACTION_LAYER_TAP_KEY(3, KC_DOT),
 		[5] = ACTION_LAYER_TAP_KEY(5, KC_COMMA),
+		[6] = ACTION_LAYER_TAP_KEY(6, KC_SLASH),
+		[7] = ACTION_LAYER_MOMENTARY(7),
   	[10] = ACTION_MODS_KEY(MOD_LSFT, KC_1),          //Exclamation
 		[11] = ACTION_MODS_KEY(MOD_LSFT, KC_2),          //At
 		[12] = ACTION_MODS_KEY(MOD_LSFT, KC_3),          //Sharp
